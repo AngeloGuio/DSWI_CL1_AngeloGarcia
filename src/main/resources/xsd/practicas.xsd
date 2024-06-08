@@ -1,0 +1,20 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+           elementFormDefault="qualified">
+    <xs:element name="getPracticasRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="practicas" type="xs:int" maxOccurs="4"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPracticasResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="promedio" type="xs:decimal"/>
+                <xs:element name="menorpractica" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
