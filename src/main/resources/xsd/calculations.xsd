@@ -1,0 +1,24 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+           elementFormDefault="qualified">
+
+    <xs:element name="CalculationRequest" type="tns:CalculationRequest"/>
+    <xs:element name="CalculationResponse" type="tns:CalculationResponse"/>
+
+    <xs:complexType name="CalculationRequest">
+        <xs:sequence>
+            <xs:element name="number" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CalculationResponse">
+        <xs:sequence>
+            <xs:element name="square" type="xs:int"/>
+            <xs:element name="half" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+</xs:schema>

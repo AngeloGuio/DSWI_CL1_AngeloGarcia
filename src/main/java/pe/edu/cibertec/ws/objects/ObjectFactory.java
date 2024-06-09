@@ -2,12 +2,15 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.06.08 a las 04:47:13 PM PET 
+// Generado el: 2024.06.08 a las 05:49:36 PM PET 
 //
 
 
 package pe.edu.cibertec.ws.objects;
 
+import javax.xml.namespace.QName;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
 import jakarta.xml.bind.annotation.XmlRegistry;
 
 
@@ -28,6 +31,8 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _CalculationRequest_QNAME = new QName("http://www.cibertec.edu.pe/ws/objects", "CalculationRequest");
+    private final static QName _CalculationResponse_QNAME = new QName("http://www.cibertec.edu.pe/ws/objects", "CalculationResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: pe.edu.cibertec.ws.objects
@@ -37,19 +42,45 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetMinutesRequest }
+     * Create an instance of {@link CalculationRequest }
      * 
      */
-    public GetMinutesRequest createGetMinutesRequest() {
-        return new GetMinutesRequest();
+    public CalculationRequest createCalculationRequest() {
+        return new CalculationRequest();
     }
 
     /**
-     * Create an instance of {@link GetMinutesResponse }
+     * Create an instance of {@link CalculationResponse }
      * 
      */
-    public GetMinutesResponse createGetMinutesResponse() {
-        return new GetMinutesResponse();
+    public CalculationResponse createCalculationResponse() {
+        return new CalculationResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CalculationRequest }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link CalculationRequest }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://www.cibertec.edu.pe/ws/objects", name = "CalculationRequest")
+    public JAXBElement<CalculationRequest> createCalculationRequest(CalculationRequest value) {
+        return new JAXBElement<CalculationRequest>(_CalculationRequest_QNAME, CalculationRequest.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CalculationResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link CalculationResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://www.cibertec.edu.pe/ws/objects", name = "CalculationResponse")
+    public JAXBElement<CalculationResponse> createCalculationResponse(CalculationResponse value) {
+        return new JAXBElement<CalculationResponse>(_CalculationResponse_QNAME, CalculationResponse.class, null, value);
     }
 
 }
