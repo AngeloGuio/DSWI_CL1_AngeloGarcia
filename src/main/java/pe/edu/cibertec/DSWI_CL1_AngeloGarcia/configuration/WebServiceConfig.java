@@ -51,11 +51,11 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new SimpleXsdSchema(new ClassPathResource("xsd/practicas.xsd"));
     }
 
-    @Bean(name = "time")
+    @Bean(name = "times")
     public DefaultWsdl11Definition timeWsdl11Definition(XsdSchema timeSchema){
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("TimesPort");
-        wsdl11Definition.setLocationUri("/ws/time");
+        wsdl11Definition.setLocationUri("/ws/times");
         wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws/objects");
         wsdl11Definition.setSchema(timeSchema);
         return wsdl11Definition;
@@ -65,7 +65,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new SimpleXsdSchema(new ClassPathResource("xsd/time.xsd"));
     }
     @Bean(name = "calculations")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema calculationsSchema) {
+    public DefaultWsdl11Definition calculationsWsdl11Definition(XsdSchema calculationsSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("CalculationPort");
         wsdl11Definition.setLocationUri("/ws/calculations");
@@ -73,9 +73,23 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         wsdl11Definition.setSchema(calculationsSchema);
         return wsdl11Definition;
     }
-
     @Bean
     public XsdSchema calculationsSchema() {
         return new SimpleXsdSchema(new ClassPathResource("xsd/calculations.xsd"));
     }
+
+    @Bean(name = "medicos")
+    public DefaultWsdl11Definition medicoWsdl11Definition(XsdSchema medicoSchema){
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("MedicosPort");
+        wsdl11Definition.setLocationUri("/ws/medicos");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws/objects");
+        wsdl11Definition.setSchema(medicoSchema);
+        return wsdl11Definition;
+    }
+    @Bean
+    public XsdSchema medicoSchema(){
+        return new SimpleXsdSchema(new ClassPathResource("xsd/medico.xsd"));
+    }
+
 }
